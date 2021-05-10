@@ -1,0 +1,51 @@
+<div class="container-fluid pagina-vagas py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Filtre sua busca</h3>
+                <select  (change)="filtro()" class="form-control" name="area" style="margin-top: 30px; padding-right: 10%" [(ngModel)]="area">
+                    <option value="p">Área</option>
+                    <option value="{{area.area}}" *ngFor="let area of areas">{{area.area}}</option>
+                </select>
+                <select (change)="filtro()" class="form-control" name="nivel" style="margin-top: 30px; padding-right: 10%"  [(ngModel)]="nivel">
+                    <option value="p">Nível de senioridade</option>
+                    <option value="{{nivel.nivel}}" *ngFor="let nivel of niveis">{{nivel.nivel}}</option>
+                </select>
+                <select (change)="filtro()" class="form-control" name="cidade" style="margin-top: 30px; margin-bottom: 30px; padding-right: 10%"  [(ngModel)]="cidade">
+                    <option value="p">Cidade</option>
+                    <option value="{{cidade.cidade}}" *ngFor="let cidade of cidades">{{cidade.cidade}}</option>
+                </select>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input class="form-control mb-3" [(ngModel)]="filtroPalavra"  (keydown)="someMethod($event)" placeholder="Que tipo de vaga você procura?">
+                        <p *ngIf="carregando == true" class="text-center">
+                            <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Preparando ambiente para você...
+                        </p>
+                        <div class="row" style="min-height: 280px;">
+                            <p *ngIf="carregando == false && vagas.length == 0" class="text-center">
+                                Nenhuma vaga foi encontrada no momento!
+                            </p>
+                            <div *ngFor="let vaga of vagas" class="col-12 col-md-4 col-lg-4">
+                                <div class="card-vaga">
+                                    <div (click)="abrirVaga(vaga)" class="card-vaga-logo">
+                                        <img [src]="vaga.Empresa.Caracteristica.Logo" class="img-fluid" >
+                                    </div>
+                                    <div class="card-vaga-content">
+                                        <p class="card-vaga-title">{{vaga.Part.nome}}</p>
+                                        <p class="card-vaga-subtitle">{{vaga.Empresa.Caracteristica.Nome}}</p>
+                                        <p class="card-vaga-subtitle">{{vaga.Part.cidade.Cidade}} - {{vaga.Part.cidade.UF}}</p>
+                                    </div>
+                                    <button (click)="abrirVaga(vaga)" class="btn btn-block btn-xl btn-main">
+                                        Cadastre-se agora
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

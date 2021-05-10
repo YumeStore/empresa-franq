@@ -1,0 +1,20 @@
+.navbar.navbar-light.navbar-expand-lg {
+    padding: 0;
+}
+
+.navbar .nav .nav-item {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: right;
+}
+
+.navbar .nav .nav-item a {
+    color: #C80E0F;
+}
+
+.logo img {
+    height: 100px;
+}

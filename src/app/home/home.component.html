@@ -1,0 +1,126 @@
+<div class="container-fluid banner-principal">
+    <div class="banner-descricao">
+        <p></p>
+    </div>
+    <div class="banner-logo">
+        <p>
+            <img  src="assets/imgs/logo-giz-mobile.png" class="d-block d-md-none align-top" alt="">
+        </p>
+    </div>
+</div>
+
+<div class="container vagas-empresa">
+    <h1 class="text-center">
+        Trabalhamos para um futuro sustentável em todo o mundo
+    </h1>
+    <p class="text-center mb-5">
+        Trabalhar para a Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH traz um grande senso de propósito. Nossos projetos de desenvolvimento sustentável ajudam a trazer mudanças significativas em todo o mundo e moldar futuros melhores. Conheça nossas vagas e venha fazer parte deste time
+    </p>
+
+    <p *ngIf="carregandoVagas == true" class="text-center">
+        <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Preparando ambiente para você...
+    </p>
+
+    <p *ngIf="carregandoVagas == false && vagas.length == 0" class="text-center">
+        Nenhuma vaga foi encontrada no momento!
+    </p>
+
+    <!--  Setor de vagas  -->
+    <swiper class="slide-vagas" [slidesPerView]="1" [spaceBetween]="35" (swiper)="onSwiper($event)" [navigation]="false" [breakpoints]="breakpoints">
+        <ng-template swiperSlide *ngFor="let vaga of vagas" class="card-vaga">
+            <div (click)="abrirVaga(vaga)" class="card-vaga-logo">
+                <img [src]="vaga.Empresa.Caracteristica.Logo" class="img-fluid" >
+            </div>
+            <div class="card-vaga-content">
+                <p class="card-vaga-title">{{vaga.Part.nome}}</p>
+                <p class="card-vaga-subtitle">{{vaga.Empresa.Caracteristica.Nome}}</p>
+                <p class="card-vaga-subtitle">{{vaga.Part.cidade.Cidade}} - {{vaga.Part.cidade.UF}}</p>
+            </div>
+            <button (click)="abrirVaga(vaga)" class="btn btn-block btn-xl btn-main">
+                Cadastre-se agora
+            </button>
+        </ng-template>
+    </swiper>
+
+    <p class="text-center my-3"  *ngIf="carregandoVagas == false && vagas.length > 3">
+      <img src="assets/imgs/chevron-left.png" class="" (click)="previousSlide()">
+      <img src="assets/imgs/chevron-right.png" class="" (click)="nextSlide()">
+    </p>
+
+    <p class="text-center my-4">
+        <a class="btn btn-main btn-xl" [routerLink]="['/vagas']">Ver mais vagas</a>
+    </p>
+</div>
+
+<div class="container-fluid sobre-empresa">
+    <div class="container">
+        <h2 class="text-center py-4">SOBRE A GIZ</h2>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="embed-responsive embed-responsive-16by9 d-block d-md-none mb-3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d6Sm3cs1FWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    A Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH é uma empresa do governo alemão atuante no domínio da cooperação internacional para o desenvolvimento sustentável. Com mais de 50 anos de experiência em áreas como desenvolvimento e emprego, energia, meio ambiente, manutenção da paz e segurança, a GIZ apoia o governo alemão e outros clientes dos setores público e privado em cerca de 120 países no alcance dos seus objetivos em cooperação internacional e trabalha em conjunto com os seus parceiros para o desenvolvimento de soluções eficazes e sustentáveis.
+                </p>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="embed-responsive embed-responsive-16by9 d-none d-md-block">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d6Sm3cs1FWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>            
+        </div>
+        <p class="text-center my-4">
+            <a [routerLink]="['/vagas']" class="btn btn-main btn-xl">Conheça nossas vagas</a>
+        </p>
+    </div>
+</div>
+
+<div class="container redes-sociais">
+    <h3 class="text-center">Siga-nos nas redes sociais</h3>
+    <p class="text-center">
+        <a title="Website" href="https://www.giz.de/brasil" target="_blank">
+            <img src="assets/imgs/globe.svg" alt="website" class="icon" />
+        </a>
+        <a title="Youtube" href="https://www.youtube.com/channel/UCa0N4-vi35zsfPyusrJjkEQ/featured" target="_blank">
+            <img src="assets/imgs/youtube.svg" alt="youtube" class="icon" />
+        </a>
+        <a title="Twitter" href="https://twitter.com/giz_gmbh" target="_blank">
+            <img src="assets/imgs/twitter.svg" alt="twitter" class="icon" />
+        </a>
+        <a title="Linkedin" href="https://www.linkedin.com/company/giz-brazil" target="_blank">
+            <img src="assets/imgs/linkedin.svg" alt="linkedin" class="icon" />
+        </a>
+        <a title="Soundcloud" href="https://soundcloud.com/gizbrasil" target="_blank">
+            <img src="assets/imgs/soundcloud.svg" alt="soundcloud" class="icon" />
+        </a>
+    </p>
+</div>
+
+<div class="container-fluid blog">
+    <div class="container">
+        <h3 class="text-center">Blog</h3>
+
+        <p *ngIf="carregandoVagas == true" class="text-center">
+            <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Procurando últimos posts...
+        </p>
+
+        <!-- posts holder -->
+        <div class="row">
+            <div *ngFor="let post of posts" (click)="abrirPost(post)" class="col-12 col-md-4">
+                <div class="card-blog">
+                    <div class="card-blog-logo">
+                        <img [src]="post['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['medium'].source_url">
+                    </div>
+                    <h4 class="card-blog-title">
+                        {{ post.title.rendered }}
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center my-4">
+            <a class="btn btn-main btn-xl" target="_blank" href="https://www.reachr.com.br/blog/">Ver mais conteúdos</a>
+        </p>
+    </div>
+</div>

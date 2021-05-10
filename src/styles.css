@@ -1,0 +1,181 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import '~swiper/swiper-bundle';
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+}
+
+.container h1, .container-fluid h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /*font-family: 'Abel', sans-serif;*/
+    /*font-family: 'Dosis', sans-serif;*/
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-family: 'Nunito', sans-serif;*/
+    font-size: 48px;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+}
+
+.container h2, .container-fluid h2 {
+    /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+    /*font-family: 'Abel', sans-serif;*/
+    font-family: 'Dosis', sans-serif;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-family: 'Nunito', sans-serif;*/
+    font-size: 30px;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.container h3, .container-fluid h3 {
+    /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+    /*font-family: 'Abel', sans-serif;*/
+    font-family: 'Dosis', sans-serif;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-family: 'Nunito', sans-serif;*/
+    font-size: 26px;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.container p, .container-fluid p {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    line-height: 1.2em;
+}
+
+.slide-vagas {
+    /*height: 450px;*/
+}
+
+.card-vaga {
+    width: 100%;
+    background: #939598;
+    border-radius: 28px;
+    padding: 14px 12px;
+    margin: 0;
+    display: inline-block; 
+    margin-bottom: 1em;
+}
+
+.card-vaga .card-vaga-logo {
+    width: 100%;
+    height: 200px;
+    padding: 15px 10px;
+    background-color: white;
+    border-radius: 28px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-vaga .card-vaga-logo img {
+    margin: 2em auto;
+}
+
+.card-vaga .card-vaga-content {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.card-vaga .card-vaga-title {
+    word-wrap: normal;
+    white-space: normal;
+    height: 60px;
+}
+
+.card-vaga .card-vaga-subtitle {
+    max-width: 300px;
+    word-wrap: normal;
+    white-space: normal;
+    font-style: italic;
+}
+
+.btn-main {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    cursor: pointer;
+    color:white;
+    background: #e23452;
+}
+
+.btn-group-xl>.btn, .btn-xl {
+    padding: .5rem 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0;
+}
+
+
+.card-blog {
+    background: #C80E0F;
+    margin: 0;
+    display: inline-block; 
+    margin-bottom: 1em;
+}
+
+.card-blog .card-blog-logo {
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-blog .card-blog-logo img {
+    width: 100%;
+}
+
+
+.card-blog .card-blog-title {
+    text-align: center;
+    padding: 20px;
+    word-wrap: normal;
+    white-space: normal;
+    font-weight: bold;
+    height: 115px;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    font-size: 24px; 
+    /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
+    /*font-family: 'Abel', sans-serif;*/
+    font-family: 'Dosis', sans-serif;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-family: 'Nunito', sans-serif;*/
+}
+@media (max-width: 576px) { 
+    .card-blog .card-blog-title {
+        padding: 5px;
+        height: auto;
+    }
+
+    .card-blog {
+        margin-bottom: 2em;
+    }
+    .card-blog .card-blog-logo {
+        height: auto;
+    }
+}
