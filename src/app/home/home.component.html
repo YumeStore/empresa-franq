@@ -4,24 +4,19 @@
     </div>
     <div class="banner-logo">
         <p>
-            <img  src="assets/imgs/logo-giz-mobile.png" class="d-block d-md-none align-top" alt="">
+            <img src="assets/imgs/logo_showcase.jpg" class="d-block d-md-none align-top" alt="">
         </p>
     </div>
 </div>
 
 <div class="container vagas-empresa">
-    <h1 class="text-center">
-        Trabalhamos para um futuro sustentável em todo o mundo
-    </h1>
-    <p class="text-center mb-5">
-        Trabalhar para a Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH traz um grande senso de propósito. Nossos projetos de desenvolvimento sustentável ajudam a trazer mudanças significativas em todo o mundo e moldar futuros melhores. Conheça nossas vagas e venha fazer parte deste time
-    </p>
-
     <p *ngIf="carregandoVagas == true" class="text-center">
-        <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Preparando ambiente para você...
+        <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Preparando ambiente
+        para você...
     </p>
 
-    <p *ngIf="carregandoVagas == false && vagas.length == 0" class="text-center">
+    <p *ngIf="carregandoVagas == false && vagas.length == 0"
+        class="text-center">
         Nenhuma vaga foi encontrada no momento!
     </p>
 
@@ -42,9 +37,11 @@
         </ng-template>
     </swiper>
 
-    <p class="text-center my-3"  *ngIf="carregandoVagas == false && vagas.length > 3">
-      <img src="assets/imgs/chevron-left.png" class="" (click)="previousSlide()">
-      <img src="assets/imgs/chevron-right.png" class="" (click)="nextSlide()">
+    <p class="text-center my-3" *ngIf="carregandoVagas == false && vagas.length>
+        3">
+        <img src="assets/imgs/chevron-left.png" class=""
+            (click)="previousSlide()">
+        <img src="assets/imgs/chevron-right.png" class="" (click)="nextSlide()">
     </p>
 
     <p class="text-center my-4">
@@ -52,26 +49,123 @@
     </p>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card card-depoimento">
+                <img class="card-img-top"
+                    src="assets/imgs/Depoimentos/Alexia Alves.jpg"
+                    alt="alexia alves">
+                <div class="card-body">
+                    <h3 class="card-title">Alexia Alves</h3>
+                    <h4 class="card-title">[PRODUÇÃO AUDIOVISUAL]</h4>
+                    <p class="card-text card-texto">Trabalhar aqui é especial por
+                        muitas coisas, entre elas, estar constantemente
+                        ligada a pessoas diferentes de mim, com idéias,
+                        projetos, visões críticas e vivências
+                        diversificadas, podendo compartilhar e crescer.
+                        Outra coisa é o serviço final que a área de Produção
+                        Audiovisual presta: produzir acessibilidade, o que
+                        gera uma grande satisfação, pois é de muita
+                        importância para quem utiliza e necessita, sendo uma
+                        forma de inclusão.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-depoimento">
+                <img class="card-img-top"
+                    src="assets/imgs/Depoimentos/Dener.jpg"
+                    alt="dener">
+                <div class="card-body">
+                    <h3 class="card-title">Dener Stassun</h3>
+                    <h4 class="card-title">[PESQUISA, DESENVOLVIMENTO &
+                        INOVAÇÃO]</h4>
+                    <p class="card-text card-texto">Como desenvolvedor de software,
+                        vejo a implementação de softwares para TV Digital
+                        Brasileira como um terreno fértil para soluções
+                        instigantes e inteligentes, tornando o trabalho
+                        muito gratificante! Além disto, como estudante de
+                        graduação, não seria possível aliar meus estudos ao
+                        trabalho sem a flexibilidade presente na ShowCase.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-depoimento">
+                <img class="card-img-top"
+                    src="assets/imgs/Depoimentos/Erick Massayuki.jpg"
+                    alt="erick">
+                <div class="card-body">
+                    <h3 class="card-title">Erick Massayuki</h3>
+                    <h4 class="card-title">[TECNOLOGIA DA INFORMAÇÃO]</h4>
+                    <p class="card-text card-texto">O que seria da humanidade sem o
+                        suporte? Para nós do TI da ShowCase, todos os dias
+                        levamos como aprendizagem e desafios. Nossas
+                        ferramentas são específicas, não se aprende
+                        perguntando ao Google, e sim, aceitando esse
+                        desafio, o que acaba sendo mais instigante e
+                        inovador! Além de tudo, é gratificante saber que
+                        nossos esforços são convertidos em acessibilidade!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid sobre-empresa">
     <div class="container">
-        <h2 class="text-center py-4">SOBRE A GIZ</h2>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <div class="embed-responsive embed-responsive-16by9 d-block d-md-none mb-3">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d6Sm3cs1FWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2 class="text-center py-4">SOBRE A SHOWCASE</h2>
+            <div id="carrossel" class="carousel slide"
+                data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carrosel"
+                        data-slide-to="0" class="active"></li>
+                    <li data-target="#carrossel"
+                        data-slide-to="1"></li>
+                    <li data-target="#carrossel"
+                        data-slide-to="2"></li>
+                    <li data-target="#carrossel"
+                        data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 carrossel-div"
+                            src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg"
+                            alt="slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 carrossel-div"
+                            src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg"
+                            alt="slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 carrossel-div"
+                            src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg"
+                            alt="slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 carrossel-div"
+                            src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg"
+                            alt="slide 1">
+                    </div>
                 </div>
-                <p>
-                    A Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH é uma empresa do governo alemão atuante no domínio da cooperação internacional para o desenvolvimento sustentável. Com mais de 50 anos de experiência em áreas como desenvolvimento e emprego, energia, meio ambiente, manutenção da paz e segurança, a GIZ apoia o governo alemão e outros clientes dos setores público e privado em cerca de 120 países no alcance dos seus objetivos em cooperação internacional e trabalha em conjunto com os seus parceiros para o desenvolvimento de soluções eficazes e sustentáveis.
-                </p>
-            </div>
-            <div class="col-12 col-md-8">
-                <div class="embed-responsive embed-responsive-16by9 d-none d-md-block">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d6Sm3cs1FWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>            
+                <a class="carousel-control-prev"
+                    href="#carrossel" role="button"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next"
+                    href="#carrossel" role="button"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
         </div>
         <p class="text-center my-4">
-            <a [routerLink]="['/vagas']" class="btn btn-main btn-xl">Conheça nossas vagas</a>
+            <a [routerLink]="['/vagas']" class="btn btn-main btn-xl">Conheça
+                nossas vagas</a>
         </p>
     </div>
 </div>
@@ -82,17 +176,22 @@
         <a title="Website" href="https://www.giz.de/brasil" target="_blank">
             <img src="assets/imgs/globe.svg" alt="website" class="icon" />
         </a>
-        <a title="Youtube" href="https://www.youtube.com/channel/UCa0N4-vi35zsfPyusrJjkEQ/featured" target="_blank">
+        <a title="Youtube"
+            href="https://www.youtube.com/channel/UCa0N4-vi35zsfPyusrJjkEQ/featured"
+            target="_blank">
             <img src="assets/imgs/youtube.svg" alt="youtube" class="icon" />
         </a>
         <a title="Twitter" href="https://twitter.com/giz_gmbh" target="_blank">
             <img src="assets/imgs/twitter.svg" alt="twitter" class="icon" />
         </a>
-        <a title="Linkedin" href="https://www.linkedin.com/company/giz-brazil" target="_blank">
+        <a title="Linkedin" href="https://www.linkedin.com/company/giz-brazil"
+            target="_blank">
             <img src="assets/imgs/linkedin.svg" alt="linkedin" class="icon" />
         </a>
-        <a title="Soundcloud" href="https://soundcloud.com/gizbrasil" target="_blank">
-            <img src="assets/imgs/soundcloud.svg" alt="soundcloud" class="icon" />
+        <a title="Soundcloud" href="https://soundcloud.com/gizbrasil"
+            target="_blank">
+            <img src="assets/imgs/soundcloud.svg" alt="soundcloud" class="icon"
+                />
         </a>
     </p>
 </div>
@@ -102,15 +201,18 @@
         <h3 class="text-center">Blog</h3>
 
         <p *ngIf="carregandoVagas == true" class="text-center">
-            <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Procurando últimos posts...
+            <i class="fas fa-spinner fa-spin fa-3x my-3"></i><br>Procurando
+            últimos posts...
         </p>
 
         <!-- posts holder -->
         <div class="row">
-            <div *ngFor="let post of posts" (click)="abrirPost(post)" class="col-12 col-md-4">
+            <div *ngFor="let post of posts" (click)="abrirPost(post)"
+                class="col-12 col-md-4">
                 <div class="card-blog">
                     <div class="card-blog-logo">
-                        <img [src]="post['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['medium'].source_url">
+                        <img
+                            [src]="post['_embedded']['wp:featuredmedia'][0]['media_details'].sizes['medium'].source_url">
                     </div>
                     <h4 class="card-blog-title">
                         {{ post.title.rendered }}
@@ -120,7 +222,8 @@
         </div>
 
         <p class="text-center my-4">
-            <a class="btn btn-main btn-xl" target="_blank" href="https://www.reachr.com.br/blog/">Ver mais conteúdos</a>
+            <a class="btn btn-main btn-xl" target="_blank"
+                href="https://www.reachr.com.br/blog/">Ver mais conteúdos</a>
         </p>
     </div>
 </div>

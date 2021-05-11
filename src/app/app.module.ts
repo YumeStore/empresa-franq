@@ -28,8 +28,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { SwiperModule } from 'swiper/angular';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { VagasComponent } from './vagas/vagas.component';
 
 
