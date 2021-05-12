@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   posts = [];
   slides = [0, 1, 2];
   slideAtual = 0;
+  slideAtualmd = 0;
   swiper = null;
   carregandoVagas = true;
   carregandoPosts = true;
@@ -47,7 +48,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.slideAtual = 0;
+    this.slideAtualmd = 0;
+  }
 
   async getVagas() {
     const response = await axios({
@@ -121,6 +125,50 @@ export class HomeComponent implements OnInit {
 
   efeitoFadeIn(slideAtual: number){
     var slide = document.getElementById(`slide${slideAtual}`);
+    slide.animate([{ opacity: '0' },
+                   { opacity: '1' }], 2000);
+  }
+
+  nextSlideDepoimentoMd() {
+    for (let i = 0; i < this.slides.length - 1; i++) {
+      if (i == this.slideAtualmd) {
+        this.slideAtualmd += 1;
+        this.slideControlShowMd(this.slideAtualmd);
+        this.slideControlAddMd(this.slideAtualmd - 1);
+        this.efeitoFadeInMd(this.slideAtualmd);
+        return;
+      }
+    }
+
+    this.slideAtualmd = this.slides[0];
+    this.slideControlShowMd(this.slideAtualmd);
+    this.slideControlAddMd(this.slides.length);
+  }
+
+  prevSlideDepoimentoMd() {
+    for (let i = 0; i < this.slides.length; i++) {
+      if (i == this.slideAtualmd) {
+        this.slideAtualmd -= 1;
+        this.slideControlShowMd(this.slideAtualmd);
+        this.slideControlAddMd(this.slideAtualmd + 1);
+        this.efeitoFadeInMd(this.slideAtualmd);
+        return;
+      }
+    }
+  }
+
+  slideControlShowMd(slideAtual: number) {
+    var slide = document.getElementById(`slideMd${slideAtual}`);
+    slide.classList.remove("d-none");
+  }
+
+  slideControlAddMd(slideAtual: number) {
+    var slide = document.getElementById(`slideMd${slideAtual}`);
+    slide.classList.add("d-none");
+  }
+
+  efeitoFadeInMd(slideAtual: number){
+    var slide = document.getElementById(`slideMd${slideAtual}`);
     slide.animate([{ opacity: '0' },
                    { opacity: '1' }], 2000);
   }
