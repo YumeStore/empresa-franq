@@ -44,11 +44,11 @@
     </p>
 </div>
 
-<div class="container my-2">
+<div class="container my-2 d-none d-md-block">
     <div class="titulo-intermediario text-center">
         <h2 class="text-uppercase font-weight-bold">sobre a showcase</h2>
     </div>
-    <div class="row d-none d-md-none">
+    <div class="row">
         <div class="col">
             <p class="card-texto">A SHOWCASE está entre os líderes no mercado de tecnologia, oferecendo um vasto conjunto de produtos e serviços que facilitam o acesso à informação.
                 <br>
@@ -69,6 +69,34 @@
     <div class="text-center">
         <button type="button" class="btn button-explore-vagas font-weight-bold">Explore
             as vagas</button>
+    </div>
+</div>
+
+<div class="container my-2 d-md-none">
+    <div class="row">
+        <div class="text-center row justify-content-center">
+            <h2 class="text-uppercase font-weight-bold w-75
+            titulo-depoimento">sobre a showcase</h2>
+        </div>
+        <div class="row justify-content-center px-5">
+            <p class="card-texto">A SHOWCASE está entre os líderes no mercado de tecnologia, oferecendo um vasto conjunto de produtos e serviços que facilitam o acesso à informação.
+                <br>
+                <br> Especializada no desenvolvimento de tecnologias e prestação de serviços que garantem acessibilidade para todos os públicos aos conteúdos audiovisuais e eventos dos mais variados tipos.<br>
+                <br>
+                <br> Reconhecida pela precisão e rapidez atende emissoras de televisão, produtoras de cinema, documentários e publicidade, apresentações de teatro e orquestra, canais de internet e redes sociais, bem como palestras e eventos de todos os
+                tamanhos.
+            </p>
+
+            <iframe class="" src="https://www.youtube.com/embed/d6Sm3cs1FWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="row justify-content-center px-2">
+                
+        </div>
+    </div>
+    <div class="row justify-content-center py-5 text-center">
+        <a [routerLink]="['/vagas']" class="btn button-explore-vagas font-weight-bold">Explore
+            as vagas</a>
     </div>
 </div>
 
@@ -319,7 +347,7 @@
                     </div>
                 </div>
                 <div class="row my-4 justify-content-center">
-                    <a href="#carrosselDepoimentosMd" [ngClass]="{'d-none': slideAtualmd == 0}" (click)="prevSlideDepoimentoMd()" id="prev" role="button">
+                    <a href="#" [ngClass]="{'d-none': slideAtualmd == 0}" (click)="prevSlideDepoimentoMd()" id="prev" role="button">
                         <img src="assets/imgs/double-left-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
                     </a>
                     <div id="circle" class="mx-2">
@@ -329,7 +357,7 @@
                         <img #elsemd1 class="mx-1" src="assets/imgs/circle_empty.svg" alt="" srcset="">
                         <img *ngIf="slideAtualmd == 2;" class="mx-1" src="assets/imgs/circle_filled.svg" alt="" srcset="">
                     </div>
-                    <a href="#carrosselDepoimentosMd" (click)="nextSlideDepoimentoMd()" id="next" [ngClass]="{'d-none': slideAtualmd == 2}" role="button">
+                    <a href="#" (click)="nextSlideDepoimentoMd()" id="next" [ngClass]="{'d-none': slideAtualmd == 2}" role="button">
                         <img src="assets/imgs/fast-forward-double-right-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
                     </a>
                 </div>
