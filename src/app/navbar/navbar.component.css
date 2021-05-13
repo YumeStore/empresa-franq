@@ -3,18 +3,18 @@
 }
 
 .navbar .nav .nav-item {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 1.6em;
     font-weight: bold;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-left: 20px;
     text-align: right;
 }
 
 .navbar .nav .nav-item a {
-    color: #C80E0F;
+    color: #1C1D24;
 }
 
 .logo img {
-    height: 100px;
+    height: 40px;
 }

@@ -2,27 +2,19 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import '~swiper/swiper-bundle';
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap%27');
 html, body { height: 100%; }
 
 body {
+    --cor-bg-showcase-principal: #cedc00;
+  }
+  
+body {
   margin: 0;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Open Sans';
 }
 
 .container h1, .container-fluid h1 {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    /*font-family: 'Abel', sans-serif;*/
-    /*font-family: 'Dosis', sans-serif;*/
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
     font-size: 48px;
     line-height: 1em;
     letter-spacing: 2px;
@@ -30,11 +22,6 @@ body {
 }
 
 .container h2, .container-fluid h2 {
-    /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
-    /*font-family: 'Abel', sans-serif;*/
-    font-family: 'Dosis', sans-serif;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
     font-size: 30px;
     line-height: 1em;
     letter-spacing: 2px;
@@ -43,11 +30,6 @@ body {
 }
 
 .container h3, .container-fluid h3 {
-    /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
-    /*font-family: 'Abel', sans-serif;*/
-    font-family: 'Dosis', sans-serif;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
     font-size: 26px;
     line-height: 1em;
     letter-spacing: 2px;
@@ -56,9 +38,7 @@ body {
 }
 
 .container p, .container-fluid p {
-    font-family: 'EB Garamond', serif;
     font-size: 22px;
-    line-height: 1.2em;
 }
 
 .slide-vagas {
@@ -67,7 +47,7 @@ body {
 
 .card-vaga {
     width: 100%;
-    background: #939598;
+    background: var(--cor-bg-showcase-principal);
     border-radius: 28px;
     padding: 14px 12px;
     margin: 0;
@@ -159,12 +139,7 @@ body {
     overflow: hidden;
     width: 100%;
     color: #fff;
-    font-size: 24px; 
-    /*font-family: 'Yanone Kaffeesatz', sans-serif;*/
-    /*font-family: 'Abel', sans-serif;*/
-    font-family: 'Dosis', sans-serif;
-    /*font-family: 'Open Sans Condensed', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
+    font-size: 24px;
 }
 @media (max-width: 576px) { 
     .card-blog .card-blog-title {
