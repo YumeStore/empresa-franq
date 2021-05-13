@@ -1,214 +1,288 @@
 /* Extra large devices (large desktops, 1200px and up) */
 
-
 /*@media (max-width: 1200px) { ... }*/
-
 
 /* Large devices (desktops, 992px and up) */
 
-
 /*@media (max-width: 992px) { ... }*/
-
 
 /* Medium devices (tablets, 768px and up) */
 
-
 /*@media (max-width: 768px) { ... }*/
 
-
 /* Small devices (landscape phones, 576px and up) */
-
 
 /*@media (max-width: 576px) { ... }*/
 
 p {
-    font-size: 18px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .banner-principal {
-    background-image: url(^assets/imgs/testeira_showcase .png);
+  background-image: url(^assets/imgs/testeira_showcase.png);
+  background-position: bottom;
+  padding-left: 0;
+  padding-right: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 400px;
+  margin-bottom: 2.5em;
+}
+
+@media (max-width: 650px) {
+  .banner-principal {
+    background-image: url(^assets/imgs/banner_mobile.png);
+    height: 40%;
+    width: 100%;
     background-position: bottom;
     padding-left: 0;
     padding-right: 0;
-    position: relative;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 2.5em;
+    background-size: cover;
+    margin-bottom: 5em;
+  }
 }
 
 .banner-principal .banner-descricao p {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner-principal .banner-logo {
-    position: absolute;
-    width: 100%;
-    bottom: -90px;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: -90px;
+  left: 0;
 }
 
 .banner-principal .banner-logo p {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner-principal .banner-logo p img {
-    width: 150px;
-    background: #fff;
-    border-radius: 1em;
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 576px) {
-    .banner-principal {
-        background-image: url(^assets/imgs/banner_mobile.png);
-        height: 60%;
-        margin-bottom: 5em;
-    }
+  width: 150px;
+  background: #fff;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .vagas-empresa {
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 
 .sobre-empresa {
-    padding: 1em;
-    color: #000;
+  padding: 1em;
+  color: #000;
 }
 
 .redes-sociais {
-    padding: 1.5em 0;
-    margin-bottom: 2.5em;
+  padding: 1.5em 0;
+  margin-bottom: 2.5em;
 }
 
 .icon {
-    width: 60px;
-    padding: 10px 10px;
+  width: 60px;
+  padding: 10px 10px;
 }
 
 .blog {
-    padding: 1.5em;
-    background: #D4D633;
+  padding: 1.5em;
+  background: var(--cor-bg-showcase-principal);
 }
 
 .blog .container .row {
-    /*min-height: 400px;*/
+  /*min-height: 400px;*/
 }
 
 .btn {
-    background-color: #D4D633;
+  background-color: black;
 }
 
 .navbar {
-    color: #D4D633;
+  color: var(--cor-bg-showcase-principal);
 }
 
 .card-depoimento {
-    width: 100%;
-    height: 850px;
-    margin: 10rem 0;
-    background-color: #D6D639;
+  width: 100%;
+  height: 850px;
+  margin: 10rem 0;
+  background-color: var(--cor-bg-showcase-principal);
 }
 
 .card-texto {
-    padding: 15px;
+  padding: 15px;
 }
 
 .carrossel-div {
-    width: 100%;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 23px -4px #000000;
-    box-shadow: 0px 0px 23px -4px #000000;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 23px -4px #000000;
+  box-shadow: 0px 0px 23px -4px #000000;
 }
 
 .card-blog-title {
-    background-color: #363636;
+  background-color: #363636;
 }
 
 .card-blog {
-    background-color: #363636;
+  background-color: #363636;
 }
 
 .card-blog-logo {
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 .image-func {
-    width: 450px;
-    border-radius: 30px;
-    height: 950px;
-    object-fit: cover;
-    object-position: 50% 100%;
-    -webkit-box-shadow: 0px 0px 35px -3px #000000;
-    box-shadow: 0px 0px 35px -3px #000000;
+  width: 450px;
+  border-radius: 30px;
+  height: 950px;
+  object-fit: cover;
+  object-position: 50% 100%;
+  -webkit-box-shadow: 0px 0px 35px -3px #000000;
+  box-shadow: 0px 0px 35px -3px #000000;
 }
 
 .image-card {
-    top: -50px;
+  top: -50px;
 }
 
 .depoimento-texto {
-    line-height: 2;
-    width: 70%;
-    height: 400px;
+  line-height: 1.5;
+  width: 70%;
+  height: 400px;
 }
 
 .titulo-depoimento {
-    line-height: 1.2;
-    font-size: 40px;
+  line-height: 1.2;
 }
 
 .carrossel-item {
-    margin: 0;
+  margin-top: 12px;
+  margin-bottom: 10px;
 }
 
 .btn-convite-time {
-    border-radius: 20px;
+  border-radius: 20px;
+  background-color: var(--cor-bg-showcase-principal);
 }
 
-.redes-sociais h1 {}
+.redes-sociais h1 {
+}
 
 .button-explore-vagas {
-    border-radius: 5px;
-    padding: 10px 30px;
-    color: white;
-    -webkit-box-shadow: 0px 0px 10px -5px #000000;
-    box-shadow: 0px 0px 10px -5px #000000;
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: 300px;
+  margin-top: 25px;
+  color: white;
+  background-color: var(--cor-bg-showcase-principal);;
+  -webkit-box-shadow: 0px 0px 10px -5px #000000;
+  box-shadow: 0px 0px 10px -5px #000000;
 }
 
 .btn-ver-conteudo {
-    border-radius: 10px;
-    margin: 2px;
-    background-color: #363636;
+  border-radius: 10px;
+  margin: 2px;
+  background-color: #363636;
 }
 
 .card-depoimento-md {
-    width: 100%;
-    height: 1550px;
-    margin: 2rem 0;
-    background-color: #D6D639;
+  width: 100%;
+  height: 1700px;
+  margin: 2rem 0;
+  background-color: var(--cor-bg-showcase-principal);
 }
 
+.card-vaga
+
 .depoimento-texto-md {
-    line-height: 2;
-    width: 90%;
-    height: 500px;
+  line-height: 1.5;
+  width: 90%;
 }
 
 .image-func-md {
-    width: 300px;
-    border-radius: 30px;
-    height: 600px;
-    object-fit: cover;
-    object-position: 50% 100%;
-    -webkit-box-shadow: 0px 0px 35px -3px #000000;
-    box-shadow: 0px 0px 35px -3px #000000;
+  width: 300px;
+  border-radius: 30px;
+  height: 600px;
+  object-fit: cover;
+  object-position: 50% 100%;
+  -webkit-box-shadow: 0px 0px 35px -3px #000000;
+  box-shadow: 0px 0px 35px -3px #000000;
+}
+
+.mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 .swiper-container {
+  width: 90%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySwiper2 .swiper-container .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 90%;
+}
+
+.mySwiper {
+  height: 30%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

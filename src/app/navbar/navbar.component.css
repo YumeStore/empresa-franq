@@ -6,7 +6,8 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 1.6em;
     font-weight: bold;
-    padding: 4rem;
+    padding-top: 1rem;
+    padding-left: 20px;
     text-align: right;
 }
 

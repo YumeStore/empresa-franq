@@ -1,15 +1,20 @@
-import { Component, OnInit } from "@angular/core";
-import axios from "axios";
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import { Component, OnInit, ViewEncapsulation, } from "@angular/core";
+import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper/core";
+import { SwiperComponent } from "swiper/angular";
 
+import axios from "axios";
+
+SwiperCore.use([Navigation, Thumbs]);
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
   empresaId = "57b800c9-60b0-4b12-91de-57c4886f0165";
   numbers = [];
+  thumbsSwiper: any;
   vagas = [];
   posts = [];
   slides = [0, 1, 2];

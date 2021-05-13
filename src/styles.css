@@ -6,6 +6,10 @@
 html, body { height: 100%; }
 
 body {
+    --cor-bg-showcase-principal: #cedc00;
+  }
+  
+body {
   margin: 0;
   font-family: 'Open Sans';
 }
@@ -35,7 +39,6 @@ body {
 
 .container p, .container-fluid p {
     font-size: 22px;
-    line-height: 1.2em;
 }
 
 .slide-vagas {
@@ -44,7 +47,7 @@ body {
 
 .card-vaga {
     width: 100%;
-    background: #939598;
+    background: var(--cor-bg-showcase-principal);
     border-radius: 28px;
     padding: 14px 12px;
     margin: 0;
