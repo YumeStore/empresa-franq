@@ -12,7 +12,7 @@ SwiperCore.use([Navigation, Thumbs]);
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
-  empresaId = "57b800c9-60b0-4b12-91de-57c4886f0165";
+  empresaId = "67807b00-32f4-4ea6-8fed-231a43e93b7f";
   numbers = [];
   thumbsSwiper: any;
   vagas = [];

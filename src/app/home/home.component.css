@@ -28,6 +28,7 @@ p {
   background-size: contain;
   min-height: 400px;
   margin-bottom: 2.5em;
+  background-color: #F1F1F2;
 }
 
 @media (max-width: 650px) {
