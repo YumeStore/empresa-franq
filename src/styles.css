@@ -15,10 +15,10 @@ body {
 }
 
 .container h1, .container-fluid h1 {
-    font-size: 48px;
-    line-height: 1em;
-    letter-spacing: 2px;
-    padding-bottom: 1rem;
+  font-size: 40px ;
+  line-height: 1.2;
+  letter-spacing: 2px ;
+  padding-bottom: 1rem ;
 }
 
 .container h2, .container-fluid h2 {
@@ -48,8 +48,8 @@ body {
 .card-vaga {
     width: 100%;
     background: var(--cor-bg-showcase-principal);
-    border-radius: 28px;
-    padding: 14px 12px;
+    border-radius: 15px;
+    padding: 14px 12px 22px 12px  ;
     margin: 0;
     display: inline-block; 
     margin-bottom: 1em;
@@ -86,6 +86,8 @@ body {
     word-wrap: normal;
     white-space: normal;
     height: 60px;
+    margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .card-vaga .card-vaga-subtitle {
@@ -93,6 +95,7 @@ body {
     word-wrap: normal;
     white-space: normal;
     font-style: italic;
+    font-size: 1em;;
 }
 
 .btn-main {

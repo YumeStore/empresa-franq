@@ -1,18 +1,18 @@
-import { Component, OnInit, ViewEncapsulation, } from "@angular/core";
-import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper/core";
-import { SwiperComponent } from "swiper/angular";
+import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
+import SwiperCore, { Navigation, Pagination, Thumbs } from 'swiper/core';
+import { SwiperComponent } from 'swiper/angular';
 
-import axios from "axios";
+import axios from 'axios';
 
 SwiperCore.use([Navigation, Thumbs]);
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
-  empresaId = "67807b00-32f4-4ea6-8fed-231a43e93b7f";
+  empresaId = '57b800c9-60b0-4b12-91de-57c4886f0165';
   numbers = [];
   thumbsSwiper: any;
   vagas = [];
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.numbers = Array(10)
-      .fill("")
+      .fill('')
       .map((x, i) => i); // [0,1,2,3,4]
 
     this.getVagas().then((response) => {
@@ -60,12 +60,12 @@ export class HomeComponent implements OnInit {
 
   async getVagas() {
     const response = await axios({
-      method: "get",
+      method: 'get',
       url:
-        "https://www.reachr.com.br/api/VagaParts/GetVagasEmpresa/" +
+        'https://www.reachr.com.br/api/VagaParts/GetVagasEmpresa/' +
         this.empresaId,
       headers: {
-        Accept: "application/json, text/plain, */*",
+        Accept: 'application/json, text/plain, */*',
         "Content-Type": "application/json",
         "Sec-Fetch-Site": "same-origin",
         "Sec-Fetch-Mode": "cors",

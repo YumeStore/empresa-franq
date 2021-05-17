@@ -111,7 +111,7 @@
             <div class="items" id="carrossel">
                 <div id="slide0" class="item">
                     <div class="row">
-                        <div class="col my-5 py-2">
+                        <div class="col-9 my-5 py-2">
                             <div class="row carrossel-item">
                                 <h1 class="text-uppercase font-weight-bold w-75
                                     titulo-depoimento">
@@ -160,14 +160,14 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col image-card">
+                        <div class="col-3 image-card">
                             <img class="image-func" src="assets/imgs/Depoimentos/Alexia Alves.jpg" alt="Alexia Alves">
                         </div>
                     </div>
                 </div>
                 <div id="slide1" class="item d-none">
                     <div class="row">
-                        <div class="col my-5 py-5">
+                        <div class="col-9 my-5 py-5">
                             <div class="row carrossel-item">
                                 <h1 class="text-uppercase font-weight-bold w-75
                                     titulo-depoimento">
@@ -217,14 +217,14 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col image-card">
+                        <div class="col-3 image-card">
                             <img class="image-func" src="assets/imgs/Depoimentos/Dener.jpg" alt="Dener">
                         </div>
                     </div>
                 </div>
                 <div id="slide2" class="item d-none">
                     <div class="row">
-                        <div class="col my-5 py-5">
+                        <div class="col-9 my-5 py-5">
                             <div class="row carrossel-item">
                                 <h1 class="text-uppercase font-weight-bold w-75
                                     titulo-depoimento">
@@ -271,7 +271,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col image-card">
+                        <div class="col-3 image-card">
                             <img class="image-func" src="assets/imgs/Depoimentos/Erick Massayuki.jpg" alt="Erick Massayuki">
                         </div>
                     </div>
@@ -381,63 +381,76 @@
 
 <div class="container-fluid sobre-empresa">
     <div class="container">
-        <div class="titulo-intermediario text-center mb-5">
-            <h2 class="text-uppercase font-weight-bold">Conheça seu futuro time</h2>
+        <div class="row justify-content-center">
+            <div class="titulo-intermediario text-center mb-5">
+                <h2 class="text-uppercase font-weight-bold">Conheça seu futuro time</h2>
+            </div>
         </div>
-        <swiper
-      style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
-      [loop]="true"
-      [spaceBetween]="10"
-      [navigation]="true"
-      [thumbs]="{ swiper: thumbsSwiper }"
-      containerModifierClass="swiper-container-galeria"
-      class="mySwiper2"
-    >
-      <ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg" /></ng-template
-      >
-    </swiper>
-    <swiper
-      (swiper)="thumbsSwiper = $event"
-      [loop]="true"
-      [spaceBetween]="10"
-      [slidesPerView]="4"
-      [freeMode]="true"
-      [watchSlidesVisibility]="true"
-      [watchSlidesProgress]="true"
-      containerModifierClass="swiper-container-thumb"
-      class="mySwiper"
-    >
-      <ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg" /></ng-template
-      ><ng-template swiperSlide
-        ><img
-          src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg" /></ng-template
-      >
-    </swiper>
-        <p class="text-center my-4">
-            <a [routerLink]="['/vagas']" class="btn
-                btn-main btn-convite-time
-                btn-xl">Venha fazer parte do nosso time</a>
-        </p>
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <swiper
+                style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
+                [loop]="true"
+                [spaceBetween]="10"
+                [navigation]="true"
+                [thumbs]="{ swiper: thumbsSwiper }"
+                containerModifierClass="swiper-container-galeria"
+                class="mySwiper2"
+              >
+                <ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg" /></ng-template
+                ><ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg" /></ng-template
+                ><ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg" /></ng-template
+                ><ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg" /></ng-template
+                >
+              </swiper>
+            </div>
+            <div class="col-3">
+                <swiper
+                (swiper)="thumbsSwiper = $event"
+                [spaceBetween]="20"
+                [slidesPerView]="4"
+                [direction] = "'vertical'"
+                [watchSlidesVisibility]="true"
+                [watchSlidesProgress]="true"
+                class="mySwiper"
+              >
+                <ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg" /></ng-template
+                ><ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg" /></ng-template
+                ><ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg" /></ng-template
+                ><ng-template swiperSlide
+                  ><img
+                    src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg" /></ng-template
+                >
+              </swiper>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <p class="text-center my-4">
+                <a [routerLink]="['/vagas']" class="btn
+                    btn-main btn-convite-time
+                    btn-xl">Venha fazer parte do nosso time</a>
+            </p>
+        </div>
     </div>
+</div>
+
+<div class="container">
+
 </div>
 
 <div class="container redes-sociais">
