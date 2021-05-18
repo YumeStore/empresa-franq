@@ -29,11 +29,11 @@ export class HomeComponent implements OnInit {
       spaceBetween: 35,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: 35,
     },
     1280: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 35,
     },
   };

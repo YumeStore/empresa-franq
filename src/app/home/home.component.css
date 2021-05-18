@@ -15,35 +15,48 @@
 /*@media (max-width: 576px) { ... }*/
 
 
-
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/PoynterOSTextOne-Bold.eot");
+  src: url("/assets/PoynterOSTextOne-Bold.eot?#iefix") format('embedded-opentype'),
+       url("/assets/PoynterOSTextOne-Bold.woff2") format('woff2'),
+       url("/assets/PoynterOSTextOne-Bold.woff") format('woff'),
+       url("/assets/PoynterOSTextOne-Bold.ttf") format('truetype');
+  font-weight: 800;
+  font-style: bold;
+}
 
 p {
   font-size: 18px;
   line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'PoynterOSTextOne-Bold' !important;
+  font-weight: bold !important;
 }
 
 .banner-principal {
-  background-image: url(^assets/imgs/testeira_showcase.png);
-  background-position: bottom;
   padding-left: 0;
   padding-right: 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 400px;
+  margin-bottom: 2.5em;
+  background-color: #FFF;
+  background-position: top; /*:D*/
+}
+.banner-principal-mobile{
+  width: 100% !important;
+  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 2.5em;
   background-color: #F1F1F2;
 }
 
 @media (max-width: 650px) {
   .banner-principal {
-    background-image: url(^assets/imgs/banner_mobile.png);
-    height: 40%;
     width: 100%;
-    background-position: bottom;
     padding-left: 0;
     padding-right: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-bottom: 5em;
   }
 }
@@ -78,6 +91,91 @@ p {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.img-banner-central{
+  width: 120% !important;
+}
+
+.trabalhe-card{
+  max-width: 30rem;
+  max-height: 34rem;
+}
+
+@media only screen and (min-width: 1500px) {
+  .img-size{
+    width: 150% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .trabalhe-card{
+    max-width: 30rem;
+    max-height: 40rem;
+  }
+  .img-size{
+    width: 130% !important;
+  }
+
+  .desc-trabalhe{
+    font-size: 18px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .trabalhe-franq-desk{
+    display: flex;
+  }
+  .trabalhe-franq-mob{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  /* .trabalhe-franq{
+    flex-direction: column-reverse;
+  } */
+  /*change to col-12*/
+  .trabalhe-img{
+    margin-left: 0px !important;
+    background-image: url(^assets/imgs/Menina-Desktop.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .trabalhe-card {
+    max-width: 31rem;
+    margin-top: -20px !important;
+  }
+
+  .titulo-trabalhe-franq {
+    max-width: 100% !important;
+    background-color: #6b7cea;
+  }
+
+  .trabalhe-franq {
+    padding-bottom: 0px !important;
+    background-color: #6b7cea;
+    margin-bottom: -50px;
+  }
+    
+  .img-size{
+    width: 100% !important;
+  }
+  
+  .trabalhe-franq-desk{
+    display:none;
+  }
+  .trabalhe-franq-mob{
+    display: block;
+  }
+
+  .desc-trabalhe {
+    font-size: 22px !important;
+  }
+  
+}
+
 .vagas-empresa {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
@@ -86,6 +184,11 @@ p {
 .sobre-empresa {
   padding: 1em;
   color: #000;
+}
+
+.sobreSecao{
+  background-color: #6B7CEA;
+  color: #FFF;
 }
 
 .redes-sociais {
@@ -100,15 +203,21 @@ p {
 
 .blog {
   padding: 1.5em;
-  background: var(--cor-bg-showcase-principal);
+  background-color:  #6B7CEA;
+}
+
+.titulo-sessao-blog{
+  color:  #6B7CEA;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: #FFD557;
+  max-width: 20rem;
+  margin-top: -60px;
+  font-size:large;
 }
 
 .blog .container .row {
   /*min-height: 400px;*/
-}
-
-.btn {
-  background-color: black;
 }
 
 .navbar {
@@ -134,12 +243,14 @@ p {
   box-shadow: 0px 0px 23px -4px #000000;
 }
 
-.card-blog-title {
-  background-color: #363636;
+.card-blog .card-blog-title {
+  font-weight: bold;
+  background-color: #FFD557 ;
+  color: #313131;
 }
 
 .card-blog {
-  background-color: #363636;
+  background-color: #FFD557 ;
 }
 
 .card-blog-logo {
@@ -158,6 +269,60 @@ p {
 
 .image-card {
   top: -50px;
+}
+
+.trabalhe-franq{
+  padding: 100px 0 100px 0;
+}
+
+.titulo-trabalhe-franq{
+  background-color: #6B7CEA;
+  color:white;
+  max-width: 25rem;
+  max-height: 20rem;
+  margin-top: -60px;
+  
+  -webkit-box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.34);
+  -moz-box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.34);
+  box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.34);
+}
+
+.trabalhe-card{
+  margin-left: 70px;
+  z-index: 10;
+  -webkit-box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.34);
+  -moz-box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.34);
+  box-shadow: 10px 10px 20px -7px rgba(0,0,0,0.34);
+  margin: auto 0;
+}
+
+.box-shadow{
+  -webkit-box-shadow: 8px 8px 35px 2px rgba(0,0,0,0.34);
+  -moz-box-shadow: 8px 8px 35px 2px rgba(0,0,0,0.34);
+  box-shadow: 8px 8px 35px 2px rgba(0,0,0,0.34);
+}
+
+.border-none{
+  border: none !important;
+}
+
+.box-logo-mobile{
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+  margin-top: -50px;
+  background-color: #fff;
+}
+
+.logo-mobile{
+  display: flex;
+  align-self: center;
+}
+
+.trabalhe-img{
+  margin-left: -70px;
+  z-index: 5;
 }
 
 .depoimento-texto {
@@ -193,9 +358,11 @@ p {
 }
 
 .btn-ver-conteudo {
-  border-radius: 10px;
   margin: 2px;
-  background-color: #363636;
+  background-color: #FFF0 !important;
+  color:white;
+  border: solid 2px #FFF;
+  border-radius: 10px !important;
 }
 
 .card-depoimento-md {
@@ -205,7 +372,35 @@ p {
   background-color: var(--cor-bg-showcase-principal);
 }
 
-.card-vaga
+
+
+.card-vaga{
+  background-color:  #6B7CEA;
+}
+
+/*ajustes cards de vagas para layout atual 4 colunas*/
+.card-vaga .card-vaga-logo{
+  height: 100px
+}
+
+.card-vaga .card-vaga-title {
+	margin-bottom: 25px;
+}
+
+.container p, .container-fluid p {
+	font-size: 19px;
+}
+
+.btn-group-xl > .btn, .btn-xl {
+  padding: .5rem 3rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 0;
+}
+ 
+.btn-vaga{
+  background-color: #FF6963;
+}
 
 .depoimento-texto-md {
   line-height: 1.5;

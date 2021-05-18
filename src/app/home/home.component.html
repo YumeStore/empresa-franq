@@ -1,11 +1,70 @@
-<div class="container-fluid banner-principal">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap');
+    </style> 
+
+
+<div class="container-fluid banner-principal w-100 d-none d-md-block">
+    <img class="w-100 rounded" src="../../assets/imgs/banner-desktop.jpg">
 </div>
 
-<div class="container my-2">
-    <div class="titulo-pagina text-center">
-        <h1 class="text-uppercase font-weight-bold">FAÇA PARTE DO NOSSO TIME!</h1>
+<div class="container-fluid banner-principal-mobile w-100 d-sm-block d-md-none">
+    <img class="w-100 rounded" src="../../assets/imgs/banner-mobile.jpg">
+    <div class="card border-none bg-white mb-3">
+        <div class="card-body box-shadow box-logo-mobile mx-auto">
+            <div class="logo-mobile">
+            <img class="w-100" src="../../assets/imgs/logo-franq.png">
+            </div>
+        </div>
     </div>
 </div>
+
+<div class="container trabalhe-franq row m-auto trabalhe-franq-desk">
+  <div class="card col-5 trabalhe-card" style="">
+    <div class="card-body">
+    <div class="titulo-trabalhe-franq text-center p-2">
+        <h1 class="m-0">Trabalhe na <br>
+            Franq Openbank</h1>
+    </div>
+       <p class="p-2 desc-trabalhe">Somos uma fintech que está revolucionando a
+        profissão de bancário por meio da tecnologia. 
+        <br><br>
+        Provemos a ex-bancários uma plataforma
+        completa de distribuição de produtos e serviços
+        financeiros para pessoas e empresas, para que
+        possam continuar sua jornada trabalhando com
+        aquilo que sabem fazer de melhor. 
+        <br><br>
+        Para seguirmos crescendo, buscamos
+        profissionais com sede por desafios, inovação e
+        vontade de fazer a diferença.</p>
+    </div>
+  </div>
+  <div class="col-7 trabalhe-img"> <img class="w-100 img-size img-banner-central rounded" src="../../assets/imgs/Menina-Desktop.jpg"></div>
+</div>
+
+<div class="container-fluid trabalhe-franq row m-auto trabalhe-franq-mob">
+    <div class="titulo-trabalhe-franq text-center p-2">
+        <h1 class="m-0">Trabalhe na <br>
+            Franq Openbank</h1>
+    </div>
+    <div class="col-12 trabalhe-img p-0 w-100"></div>
+    <div class="card col-4 trabalhe-card m-auto" style="">
+      <div class="card-body">
+         <p class="p-2 desc-trabalhe">Somos uma fintech que está revolucionando a
+          profissão de bancário por meio da tecnologia. 
+          <br><br>
+          Provemos a ex-bancários uma plataforma
+          completa de distribuição de produtos e serviços
+          financeiros para pessoas e empresas, para que
+          possam continuar sua jornada trabalhando com
+          aquilo que sabem fazer de melhor. 
+          <br><br>
+          Para seguirmos crescendo, buscamos
+          profissionais com sede por desafios, inovação e
+          vontade de fazer a diferença.</p>
+      </div>
+    </div>
+  </div>
 
 <div class="container vagas-empresa">
     <p *ngIf="carregandoVagas == true" class="text-center">
@@ -34,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            <button (click)="abrirVaga(vaga)" class="btn btn-block btn-xl
+            <button (click)="abrirVaga(vaga)" class="btn btn-vaga btn-block btn-xl
                 btn-main">
                 Cadastre-se agora
             </button>
@@ -48,30 +107,22 @@
     </p>
 </div>
 
-<div class="container my-2 d-none d-md-block">
+<div class="container-fluid my-2 p-5 d-none d-md-block sobreSecao">
     <div class="titulo-intermediario text-center">
-        <h2 class="text-uppercase font-weight-bold">sobre a showcase</h2>
+        <h2 class="text-uppercase font-weight-bold">sobre a Franq Openbank</h2>
     </div>
+
     <div class="row">
         <div class="col">
             <p class="card-texto">
-                A SHOWCASE está entre os líderes no mercado de tecnologia, oferecendo um vasto conjunto de produtos e serviços que facilitam o acesso à informação.
+                A Franq Openbank é uma fintech localizada em Florianópolis (SC), criada com o objetivo de aproveitar toda a experiência de ex-bancários e permitir que eles trabalhem de forma independente, auxiliando seus clientes a tomar melhores decisões na hora de escolher um produto ou serviço financeiro.  Construímos nossa tecnologia com base em um sistema financeiro aberto, o open banking, que visa dar mais segurança de dados e liberdade de escolha aos usuários do sistema financeiro nacional. Esse formato estimula a concorrência e provoca melhorias nas condições de negócio, atendimento e experiência do usuário, sendo uma iniciativa do Banco Central do Brasil a ser implementada por completo até o final deste ano. 
                 <br><br>
-                Especializada no desenvolvimento de tecnologias e prestação de serviços que garantem acessibilidade para todos os públicos aos conteúdos audiovisuais e eventos dos mais variados tipos.
-                <br><br>
-                Reconhecida pela precisão e rapidez atende emissoras de televisão, produtoras de cinema, documentários e publicidade, apresentações de teatro e orquestra, canais de internet e redes sociais, bem como palestras e eventos de todos os tamanhos.
+                Construímos nossa tecnologia com base em um sistema financeiro aberto, o open banking, que visa dar mais segurança de dados e liberdade de escolha aos usuários do sistema financeiro nacional. Esse formato estimula a concorrência e provoca melhorias nas condições de negócio, atendimento e experiência do usuário, sendo uma iniciativa do Banco Central do Brasil a ser implementada por completo até o final deste ano. 
             </p>
-        </div>
-        <div class="col">
-            <div class="embed-responsive embed-responsive-16by9 d-none
-                d-md-block">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/P9NxaZeFR00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
         </div>
     </div>
     <div class="text-center">
-        <a [routerLink]="['/vagas']" class="btn button-explore-vagas font-weight-bold">Explore
+        <a [routerLink]="['/vagas']" class="btn btn-outline-light btn-lg font-weight-bold">Explore
             as vagas</a>
     </div>
 </div>
@@ -105,349 +156,11 @@
     </div>
 </div>
 
-<div class="container-fluid card-depoimento d-none d-md-block">
-    <div class="container">
-        <div class="items-wrapper">
-            <div class="items" id="carrossel">
-                <div id="slide0" class="item">
-                    <div class="row">
-                        <div class="col-9 my-5 py-2">
-                            <div class="row carrossel-item">
-                                <h1 class="text-uppercase font-weight-bold w-75
-                                    titulo-depoimento">
-                                    COMO É TRABALHAR COM A GENTE</h1>
-                            </div>
-                            <div class="row carrossel-item">
-                                <p class="depoimento-texto font-italic">“Trabalhar aqui é especial por muitas coisas, entre elas, estar constantemente ligada a pessoas diferentes de mim, com idéias, projetos, visões críticas e vivências diversificadas, podendo compartilhar e crescer. Outra
-                                    coisa é o serviço final que a área de Produção Audiovisual presta: produzir acessibilidade, o que gera uma grande satisfação, pois é de muita importância para quem utiliza e necessita, sendo uma forma de inclusão.”
-                                </p>
-                            </div>
-                            <div class="row carrossel-item">
-                                <p><span class="font-weight-bold">Alexia Alves</span> - Produção Audiovisual</p>
-                            </div>
-
-                            <div class="row my-5 pr-5 justify-content-center">
-                                <div id="circle" class="mx-2">
-                                    <svg *ngIf="slideAtual == 0;else elseSlide0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                        bi-circle-fill mx-1" viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg>
-                                    <svg #elseSlide0 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                            bi-circle mx-1" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0
-                                                1A8 8
-                                                0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    </svg>
-                                    <svg *ngIf="slideAtual == 1;else elseSlide1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill mx-1" viewBox="0 0 16
-                                                16">
-                                                <circle cx="8" cy="8" r="8" />
-                                    </svg>
-                                    <svg #elseSlide1 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                                    bi-circle mx-1" viewBox="0 0 16 16">
-                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0
-                                                        14zm0
-                                                        1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    </svg>
-
-                                    <svg *ngIf="slideAtual == 2;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                                        bi-circle-fill mx-1" viewBox="0 0 16 16">
-                                                        <circle cx="8" cy="8" r="8" />
-                                    </svg>
-
-                                </div>
-                                <a href="#carrosselDepoimentos" (click)="nextSlideDepoimento()" id="next" [ngClass]="{'d-none': slideAtual == 2}" role="button">
-                                    <img src="assets/imgs/fast-forward-double-right-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-3 image-card">
-                            <img class="image-func" src="assets/imgs/Depoimentos/Alexia Alves.jpg" alt="Alexia Alves">
-                        </div>
-                    </div>
-                </div>
-                <div id="slide1" class="item d-none">
-                    <div class="row">
-                        <div class="col-9 my-5 py-5">
-                            <div class="row carrossel-item">
-                                <h1 class="text-uppercase font-weight-bold w-75
-                                    titulo-depoimento">
-                                    COMO É TRABALHAR COM A GENTE</h1>
-                            </div>
-                            <div class="row carrossel-item">
-                                <p class="depoimento-texto font-italic">“Como desenvolvedor de software, vejo a implementação de softwares para TV Digital Brasileira como um terreno fértil para soluções instigantes e inteligentes, tornando o trabalho muito gratificante! Além disto, como estudante
-                                    de graduação, não seria possível aliar meus estudos ao trabalho sem a flexibilidade presente na ShowCase.”</p>
-                            </div>
-                            <div class="row carrossel-item">
-                                <p><span class="font-weight-bold">Dener Stassun</span> - Pesquisa, Desenvolvimento & Inovação]</p>
-                            </div>
-                            <div class="row my-4 justify-content-center">
-                                <a href="#carrosselDepoimentos" [ngClass]="{'d-none': slideAtual == 0}" (click)="prevSlideDepoimento()" id="prev" role="button">
-                                    <img src="assets/imgs/double-left-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
-                                </a>
-                                <div id="circle" class="mx-2">
-                                    <svg *ngIf="slideAtual == 0;else elseSlide0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                        bi-circle-fill mx-1" viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg>
-                                    <svg #elseSlide0 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                            bi-circle mx-1" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0
-                                                1A8 8
-                                                0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    </svg>
-                                    <svg *ngIf="slideAtual == 1;else elseSlide1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill mx-1" viewBox="0 0 16
-                                                16">
-                                                <circle cx="8" cy="8" r="8" />
-                                    </svg>
-                                    <svg #elseSlide1 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                                    bi-circle mx-1" viewBox="0 0 16 16">
-                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0
-                                                        14zm0
-                                                        1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    </svg>
-
-                                    <svg *ngIf="slideAtual == 2;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                                        bi-circle-fill mx-1" viewBox="0 0 16 16">
-                                                        <circle cx="8" cy="8" r="8" />
-                                    </svg>
-
-                                </div>
-                                <a href="#carrosselDepoimentos" (click)="nextSlideDepoimento()" id="next" [ngClass]="{'d-none': slideAtual == 2}" role="button">
-                                    <img src="assets/imgs/fast-forward-double-right-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-3 image-card">
-                            <img class="image-func" src="assets/imgs/Depoimentos/Dener.jpg" alt="Dener">
-                        </div>
-                    </div>
-                </div>
-                <div id="slide2" class="item d-none">
-                    <div class="row">
-                        <div class="col-9 my-5 py-5">
-                            <div class="row carrossel-item">
-                                <h1 class="text-uppercase font-weight-bold w-75
-                                    titulo-depoimento">
-                                    COMO É TRABALHAR COM A GENTE</h1>
-                            </div>
-                            <div class="row carrossel-item">
-                                <p class="depoimento-texto font-italic">“O que seria da humanidade sem o suporte? Para nós do TI da ShowCase, todos os dias levamos como aprendizagem e desafios. Nossas ferramentas são específicas, não se aprende perguntando ao Google, e sim, aceitando esse desafio,
-                                    o que acaba sendo mais instigante e inovador! Além de tudo, é gratificante saber que nossos esforços são convertidos em acessibilidade!”</p>
-                            </div>
-                            <div class="row carrossel-item">
-                                <p><span class="font-weight-bold">Erick Massayuki</span> - Tecnologia da Informação</p>
-                            </div>
-                            <div class="row my-4 justify-content-center">
-                                <a href="#carrosselDepoimentos" [ngClass]="{'d-none': slideAtual == 0}" (click)="prevSlideDepoimento()" id="prev" role="button">
-                                    <img src="assets/imgs/double-left-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
-                                </a>
-                                <div id="circle" class="mx-2">
-                                    <svg *ngIf="slideAtual == 0;else elseSlide0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                        bi-circle-fill mx-1" viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg>
-                                    <svg #elseSlide0 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                            bi-circle mx-1" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0
-                                                1A8 8
-                                                0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    </svg>
-                                    <svg *ngIf="slideAtual == 1;else elseSlide1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill mx-1" viewBox="0 0 16
-                                                16">
-                                                <circle cx="8" cy="8" r="8" />
-                                    </svg>
-                                    <svg #elseSlide1 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                                    bi-circle mx-1" viewBox="0 0 16 16">
-                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0
-                                                        14zm0
-                                                        1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                    </svg>
-
-                                    <svg *ngIf="slideAtual == 2;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi
-                                                        bi-circle-fill mx-1" viewBox="0 0 16 16">
-                                                        <circle cx="8" cy="8" r="8" />
-                                    </svg>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 image-card">
-                            <img class="image-func" src="assets/imgs/Depoimentos/Erick Massayuki.jpg" alt="Erick Massayuki">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
-<div class="container-fluid card-depoimento-md d-md-none py-5">
-    <div class="container">
-        <div class="items-wrapper">
-            <div class="items-md" id="carrosselDepoimentosMd">
-                <div class="row justify-content-center w-40">
-                    <h1 class="text-uppercase font-weight-bold
-                                    titulo-depoimento text-center">
-                        COMO É TRABALHAR COM A GENTE</h1>
-                </div>
-                <div id="slideMd0" class="item-md">
-                    <div class="row justify-content-center">
-                        <p class="depoimento-texto-md font-italic">“Trabalhar aqui é especial por muitas coisas, entre elas, 
-                            estar constantemente ligada a pessoas diferentes de mim, 
-                            com idéias, projetos, visões críticas e vivências diversificadas, 
-                            podendo compartilhar e crescer. Outra coisa é
-                            o serviço final que a área de Produção Audiovisual presta: 
-                            produzir acessibilidade, o que gera uma grande satisfação, 
-                            pois é de muita importância para quem utiliza e necessita, 
-                            sendo uma forma de inclusão.”
-                            <br>
-                            <br>
-                        </p>
-                    </div>
-                    <div class="row w-90 justify-content-start">
-                        <div class="col">
-                            <p><span class="font-weight-bold">Alexia Alves</span></p>
-                        </div>
-                    </div>
-                    <div class="row w-90 justify-content-start mb-4">
-                        <div class="col">
-                            <p>Produção Audiovisual</p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mb-4">
-                        <img class="image-func-md" src="assets/imgs/Depoimentos/Alexia Alves.jpg" alt="Alexia Alves">
-                    </div>
-                </div>
-                <div id="slideMd1" class="item-md d-none">
-                    <div class="row justify-content-center my-1">
-                        <p class="depoimento-texto-md font-italic">“Como desenvolvedor de software, vejo a implementação de softwares para TV Digital Brasileira como um terreno fértil para soluções instigantes e inteligentes, tornando o trabalho muito gratificante! Além disto, como estudante de
-                            graduação, não seria possível aliar meus estudos ao trabalho sem a flexibilidade presente na ShowCase.”
-                        </p>
-                    </div>
-                    <div class="row w-90 justify-content-start">
-                        <div class="col">
-                            <p><span class="font-weight-bold">Dener Stassun</span></p>
-                        </div>
-                    </div>
-                    <div class="row w-90 justify-content-start mb-4">
-                        <div class="col">
-                            <p>Pesquisa, Desenvolvimento & Inovação</p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center my-4">
-                        <img class="image-func-md" src="assets/imgs/Depoimentos/Dener.jpg" alt="Dener">
-                    </div>
-                </div>
-                <div id="slideMd2" class="item-md d-none">
-                    <div class="row justify-content-center my-1">
-                        <p class="depoimento-texto-md font-italic">“O que seria da humanidade sem o suporte? Para nós do TI da ShowCase, todos os dias levamos como aprendizagem e desafios. Nossas ferramentas são específicas, não se aprende perguntando ao Google, e sim, aceitando esse desafio,
-                            o que acaba sendo mais instigante e inovador! Além de tudo, é gratificante saber que nossos esforços são convertidos em acessibilidade!”
-                        </p>
-                    </div>
-                    <div class="row w-90 justify-content-start">
-                        <div class="col">
-                            <p><span class="font-weight-bold">Erick Massayuki</span></p>
-                        </div>
-                    </div>
-                    <div class="row w-90 justify-content-start mb-4">
-                        <div class="col">
-                            <p>Tecnologia da Informação</p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mb-4">
-                        <img class="image-func-md" src="assets/imgs/Depoimentos/Erick Massayuki.jpg" alt="Erick Massayuki">
-                    </div>
-                </div>
-                <div class="row justify-content-center my-5">
-                    <a href="#carrosselDepoimentos" [ngClass]="{'d-none': slideAtualmd == 0}" (click)="prevSlideDepoimentoMd()" id="prev" role="button">
-                        <img src="assets/imgs/double-left-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
-                    </a>
-                    <div id="circle" class="mx-2">
-                        <img *ngIf="slideAtualmd == 0; else elsemd0" class="mx-1" src="assets/imgs/circle_filled.svg" alt="" srcset="">
-                        <img #elsemd0 class="mx-1" src="assets/imgs/circle_empty.svg" alt="" srcset="">
-                        <img *ngIf="slideAtualmd == 1; else elsemd1" class="mx-1" src="assets/imgs/circle_filled.svg" alt="" srcset="">
-                        <img #elsemd1 class="mx-1" src="assets/imgs/circle_empty.svg" alt="" srcset="">
-                        <img *ngIf="slideAtualmd == 2;" class="mx-1" src="assets/imgs/circle_filled.svg" alt="" srcset="">
-                    </div>
-                    <a href="#carrosselDepoimentos" (click)="nextSlideDepoimentoMd()" id="next" [ngClass]="{'d-none': slideAtualmd == 2}" role="button">
-                        <img src="assets/imgs/fast-forward-double-right-arrows-symbol.svg" height="24" width="24" alt="" srcset="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="container-fluid sobre-empresa">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="titulo-intermediario text-center mb-5">
-                <h2 class="text-uppercase font-weight-bold">Conheça seu futuro time</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-9">
-                <swiper
-                style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
-                [loop]="true"
-                [spaceBetween]="10"
-                [navigation]="true"
-                [thumbs]="{ swiper: thumbsSwiper }"
-                containerModifierClass="swiper-container-galeria"
-                class="mySwiper2"
-              >
-                <ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg" /></ng-template
-                ><ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg" /></ng-template
-                ><ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg" /></ng-template
-                ><ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg" /></ng-template
-                >
-              </swiper>
-            </div>
-            <div class="col-3">
-                <swiper
-                (swiper)="thumbsSwiper = $event"
-                [spaceBetween]="20"
-                [slidesPerView]="4"
-                [direction] = "'vertical'"
-                [watchSlidesVisibility]="true"
-                [watchSlidesProgress]="true"
-                class="mySwiper"
-              >
-                <ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (1).jpg" /></ng-template
-                ><ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (2).jpg" /></ng-template
-                ><ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (3).jpg" /></ng-template
-                ><ng-template swiperSlide
-                  ><img
-                    src="assets/imgs/Galeria/showcase_paginadecarreiras (4).jpg" /></ng-template
-                >
-              </swiper>
-            </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <p class="text-center my-4">
-                <a [routerLink]="['/vagas']" class="btn
-                    btn-main btn-convite-time
-                    btn-xl">Venha fazer parte do nosso time</a>
-            </p>
-        </div>
-    </div>
-</div>
+
 
 <div class="container">
 
@@ -456,27 +169,28 @@
 <div class="container redes-sociais">
     <h1 class="text-center">Siga-nos nas redes sociais</h1>
     <p class="text-center">
-        <a title="Website" href="https://showcase.com.br" target="_blank">
+        <a title="Website" href="http://www.franq.com.br/" target="_blank">
             <img src="assets/imgs/globe.svg" alt="website" class="icon" />
         </a>
-        <a title="Youtube" href="https://www.youtube.com/channel/UClENbRvuYFbYG7p8vbUjRew" target="_blank">
-            <img src="assets/imgs/youtube.svg" alt="youtube" class="icon" />
-        </a>
-        <a title="Facebook" href="https://www.facebook.com/showcasepro" target="_blank">
+        <a title="Facebook" href="https://www.facebook.com/franqopenbank" target="_blank">
             <img src="assets/imgs/facebook.svg" alt="facebook" class="icon" />
         </a>
-        <a title="Linkedin" href="https://www.linkedin.com/company/showcasepro" target="_blank">
+        <a title="Linkedin" href="https://www.linkedin.com/company/franqopenbank/" target="_blank">
             <img src="assets/imgs/linkedin.svg" alt="linkedin" class="icon" />
         </a>
-        <a title="Instagram" href="https://www.instagram.com/showcasepro_" target="_blank">
+        <a title="Instagram" href="https://www.instagram.com/franqopenbank/" target="_blank">
             <img src="assets/imgs/instagram.svg" alt="instagram" class="icon" />
         </a>
     </p>
 </div>
 
+
+
 <div class="container-fluid blog">
-    <div class="container">
-        <h3 class="text-center">Blog</h3>
+    <div class="titulo-sessao-blog">
+        <h1 class="text-start py-3 m-2 fw-bold">Blog</h1>
+    </div>
+    <div class="container py-5">
 
         <p *ngIf="carregandoVagas == true" class="text-center">
             <i class="fas fa-spinner fa-spin fa-3x
@@ -498,7 +212,7 @@
         </div>
 
         <p class="text-center my-4">
-            <a class="btn btn-light btn-main btn-ver-conteudo btn-xl" target="_blank" href="https://www.reachr.com.br/blog/">Veja
+            <a class="btn btn-outline-light btn-xl" target="_blank" href="https://www.reachr.com.br/blog/">Veja
                 mais
                 conteúdos</a>
         </p>
