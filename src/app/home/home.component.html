@@ -108,8 +108,8 @@
 </div>
 
 <div class="container-fluid my-2 p-5 d-none d-md-block sobreSecao">
-    <div class="titulo-intermediario text-center">
-        <h2 class="text-uppercase font-weight-bold">sobre a Franq Openbank</h2>
+    <div class="titulo-sessao-sobre">
+        <h1 class="text-start py-3 m-2 fw-bold">Sobre a <br> Franq Openbank</h1>
     </div>
 
     <div class="row">
@@ -127,34 +127,26 @@
     </div>
 </div>
 
-<div class="container my-2 d-md-none">
-    <div class="row">
-        <div class="container my-2">
-            <div class="titulo-pagina text-center">
-                <h1 class="text-uppercase font-weight-bold">sobre a showcase</h1>
-            </div>
-        </div>
-        <div class="row justify-content-center px-5">
-            <p class="card-texto px-2">A SHOWCASE está entre os líderes no mercado de tecnologia, oferecendo um vasto conjunto de produtos e serviços que facilitam o acesso à informação.
-                <br>
-                <br> Especializada no desenvolvimento de tecnologias e prestação de serviços que garantem acessibilidade para todos os públicos aos conteúdos audiovisuais e eventos dos mais variados tipos.
-                <br>
-                <br> Reconhecida pela precisão e rapidez atende emissoras de televisão, produtoras de cinema, documentários e publicidade, apresentações de teatro e orquestra, canais de internet e redes sociais, bem como palestras e eventos de todos os
-                tamanhos.
-            </p>
+<div class="container-fluid my-2 p-5   d-sm-block d-md-none  sobreSecao-mobile">
+    <div class="titulo-sessao-sobre-mobile">
+        <h1 class="text-start py-3 m-2 fw-bold">Sobre a <br> Franq Openbank</h1>
+    </div>
 
-            <iframe class="" src="https://www.youtube.com/embed/P9NxaZeFR00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="row justify-content-center px-2">
-                
+    <div class="row">
+        <div class="col">
+            <p class="card-texto">
+                A Franq Openbank é uma fintech localizada em Florianópolis (SC), criada com o objetivo de aproveitar toda a experiência de ex-bancários e permitir que eles trabalhem de forma independente, auxiliando seus clientes a tomar melhores decisões na hora de escolher um produto ou serviço financeiro.  Construímos nossa tecnologia com base em um sistema financeiro aberto, o open banking, que visa dar mais segurança de dados e liberdade de escolha aos usuários do sistema financeiro nacional. Esse formato estimula a concorrência e provoca melhorias nas condições de negócio, atendimento e experiência do usuário, sendo uma iniciativa do Banco Central do Brasil a ser implementada por completo até o final deste ano. 
+                <br><br>
+                Construímos nossa tecnologia com base em um sistema financeiro aberto, o open banking, que visa dar mais segurança de dados e liberdade de escolha aos usuários do sistema financeiro nacional. Esse formato estimula a concorrência e provoca melhorias nas condições de negócio, atendimento e experiência do usuário, sendo uma iniciativa do Banco Central do Brasil a ser implementada por completo até o final deste ano. 
+            </p>
         </div>
     </div>
-    <div class="row justify-content-center py-5 text-center">
-        <a [routerLink]="['/vagas']" class="btn button-explore-vagas font-weight-bold">Explore
+    <div class="text-center">
+        <a [routerLink]="['/vagas']" class="btn btn-outline-light btn-lg font-weight-bold">Explore
             as vagas</a>
     </div>
 </div>
+
 
 
 
@@ -185,12 +177,14 @@
 </div>
 
 
-
+<div class="container-fluid titulo-sessao-blog-mobile   d-sm-block d-md-none">
+    <h1 class="">Blog</h1>
+</div>
 <div class="container-fluid blog">
-    <div class="titulo-sessao-blog">
+    <div class="titulo-sessao-blog d-none d-md-block">
         <h1 class="text-start py-3 m-2 fw-bold">Blog</h1>
     </div>
-    <div class="container py-5">
+    <div class="container py-5 blogs-div">
 
         <p *ngIf="carregandoVagas == true" class="text-center">
             <i class="fas fa-spinner fa-spin fa-3x
